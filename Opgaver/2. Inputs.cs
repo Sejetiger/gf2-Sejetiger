@@ -26,16 +26,22 @@ namespace Opgaver
 
             Console.WriteLine("Indtast en streng: ");
             // Lav opgaven herunder!
+            String gemmert = Console.ReadLine();
+            Console.WriteLine(gemmert);
+            
         }
 
         public static void Int1()
         {
             Console.WriteLine(
                 "Lav et program som gemmer et input som et tal og skriver tallet ud i konsollen"
-            );
+            ); 
 
             Console.WriteLine("Indtast et tal: ");
             // Lav opgaven herunder!
+            string talvinput = Console.ReadLine();
+            int talv = int.Parse(talvinput);
+            Console.WriteLine(talv);
         }
 
         public static void Double1()
@@ -46,6 +52,9 @@ namespace Opgaver
 
             Console.WriteLine("Indtast et decimaltal: ");
             // Lav opgaven herunder!
+            string decimalinput = Console.ReadLine();
+            double decimalv = double.Parse(decimalinput);
+            Console.WriteLine(decimalv);
         }
 
         public static void Bool1()

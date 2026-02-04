@@ -122,7 +122,7 @@ namespace Opgaver
             Console.WriteLine("Lav en variabel af typen char og tildel den en værdi af det første bogstav i alfabetet (Det skal være stort!)");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
-            Char.IsLetterOrDigit(A);
+            Char aaaa = 'A';
             Console.WriteLine(aaaa);
         }
 
@@ -132,6 +132,8 @@ namespace Opgaver
             Console.WriteLine("Lav en variabel af typen decimal og tildel den en værdi af 100 og en halv");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            Decimal ddd = 100.5M;
+            Console.WriteLine(ddd);
         }
     }
 }
