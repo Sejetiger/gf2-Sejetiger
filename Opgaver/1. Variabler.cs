@@ -1,4 +1,6 @@
-﻿namespace Opgaver
+﻿using System.Net.Security;
+
+namespace Opgaver
 {
     public class Variabler
     {
@@ -35,6 +37,8 @@
             Console.WriteLine("Lav en variabel af typen double og tildel den en værdi komma (decimal) værdi af 5 og en 1/4");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            double gusda = 5.25;
+            Console.WriteLine(gusda);
 
         }
 
@@ -44,6 +48,11 @@
             Console.WriteLine("Lav en variabel af typen string og tildel den en værdi - den skal indeholde teksten 'Hello, World' med et udråbstegn til sidst!");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            string GUST = ("hello,world!");
+            Console.WriteLine(GUST);
+         
+           
+            
         }
 
         public static void Bool1()
@@ -52,6 +61,9 @@
             Console.WriteLine("Lav en variabel af typen bool og tildel den en sandhedsværdi (true/false).");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            bool sdf = false;
+            Console.WriteLine(sdf);
+
 
         }
 
@@ -62,6 +74,12 @@
             Console.WriteLine("Lav to string variabeler og udskriv dem ved brug af string interpolation.");
             Console.WriteLine("De skal være 'Hello, ' og 'World!'");
             // Lav opgaven herunder!
+            string firstpart = "hello,";
+            string secondpart = "world!";
+            string HUST = firstpart + "" + secondpart;
+            Console.WriteLine(HUST);
+
+
         }
 
         public static void StringInterpolation2()
@@ -80,6 +98,8 @@
             Console.WriteLine("Kombiner dem nu til én sætning:");
 
             // Løsning med string interpolation
+            string sentence = $"{del1} {del4} {del3}{del2}";
+            Console.WriteLine(sentence);
             
         }
 
@@ -89,7 +109,12 @@
             Console.WriteLine("Lav en variabel af typen float og tildel den en værdi af 3 + 0.14");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            double guhs = 3.14;
+            Console.WriteLine(guhs);
         }
+
+
+        
 
         public static void Char1()
         {
@@ -97,6 +122,8 @@
             Console.WriteLine("Lav en variabel af typen char og tildel den en værdi af det første bogstav i alfabetet (Det skal være stort!)");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
+            Char.IsLetterOrDigit(A);
+            Console.WriteLine(aaaa);
         }
 
         public static void Decimal1()
