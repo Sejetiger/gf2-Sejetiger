@@ -65,6 +65,25 @@ namespace Opgaver
 
             Console.WriteLine("Indtast en sandhedsværdi (sandt/falsk): ");
             // Lav opgaven herunder!
+            Console.WriteLine("Er du 18 år eller ældre? (sandt/falsk): ");
+            string isårinput = Console.ReadLine();
+            bool isår;
+            if (isårinput.ToLower() == "sandt")
+            {
+                isår = true;
+            }
+            else if (isårinput.ToLower() == "falsk")
+            {
+                isår = false;
+            }
+            else
+            {
+                Console.WriteLine("Ugyldigt input. Indtast 'sandt' eller 'falsk'.");
+                return;
+            }
+
+
+
         }
 
         // Mini-projekt: Personlig profil (skabelon)
@@ -78,6 +97,11 @@ namespace Opgaver
             );
             Console.WriteLine("Eksempel: Hej, jeg hedder X, er X år gammel og kommer fra X!");
             // Lav opgaven herunder!
+            string name= Console.ReadLine();
+            string ageinput = Console.ReadLine();
+            int age = int.Parse(ageinput);
+            string city=Console.ReadLine();
+            Console.WriteLine("Hej, jeg hedder " + name + ", er " + age + " år gammel og kommer fra " + city + "!");
         }
 
         // Mini-projekt 2: BMI-beregner (skabelon)
@@ -92,6 +116,12 @@ namespace Opgaver
             Console.WriteLine(
                 "Tip: BMI beregnes som vægt divideret med højde i anden (BMI = vægt / (højde * højde))."
             );
+            string vægtinput = Console.ReadLine();
+            string højdeinput = Console.ReadLine();
+            int vægt = int.Parse(vægtinput);
+            int højde = int.Parse(højdeinput);
+            int bmi = vægt / (højde * højde);
+            Console.WriteLine("Din BMI er: " + bmi);
         }
     }
 }
