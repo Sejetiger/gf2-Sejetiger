@@ -109,7 +109,7 @@ namespace Opgaver
             Console.WriteLine("Lav en variabel af typen float og tildel den en værdi af 3 + 0.14");
             Console.WriteLine("Udskriv variablen til konsollen.");
             // Lav opgaven herunder!
-            double guhs = 3.14;
+            float guhs = 3.14f;
             Console.WriteLine(guhs);
         }
 

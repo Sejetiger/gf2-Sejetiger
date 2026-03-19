@@ -34,7 +34,17 @@ namespace Opgaver
                 "Lav et program som gemmer 5 fornavne som brugeren indtaster i et array."
             );
             // Lav opgaven herunder!
-            string[] navne = new string[5];
+            string[] fornavne = new string[5];
+             for (int i = 0; i < fornavne.Length; i++)
+            {
+                Console.WriteLine("Indtast fornavn " + (i + 1) + ": ");
+                fornavne[i] = Console.ReadLine();
+            }
+              for (int i = 0; i < fornavne.Length; i++)
+            {                     Console.WriteLine("Fornavn " + (i + 1) + ": " + fornavne[i]); 
+               }
+
+
         }
 
         public static void Array2()
@@ -44,6 +54,21 @@ namespace Opgaver
                 "Lav et program som gemmer 5 tal i et array og udskriver det største tal."
             );
             // Lav opgaven herunder!
+                int[] tal = new int[5];
+                for (int i = 0; i < tal.Length; i++)
+                {
+                    Console.WriteLine("Indtast tal " + (i + 1) + ": ");
+                    tal[i] = int.Parse(Console.ReadLine());
+            }
+                int max = tal[0];
+                for (int i = 1; i < tal.Length; i++)
+                {
+                    if (tal[i] > max)
+                    {
+                        max = tal[i];
+                    }
+                }
+                Console.WriteLine("Det største tal er: " + max);
         }
 
         public static void Array3()
@@ -54,8 +79,21 @@ namespace Opgaver
                 og udskriver dem alle i omvendt rækkefølge."
             );
             // Lav opgaven herunder!
+            string[] bynavne = new string[5];
+            if (bynavne.Length > 0)
+            {
+                for (int i = 0; i < bynavne.Length; i++)
+                {
+                    Console.WriteLine("Indtast bynavn " + (i + 1) + ": ");
+                    bynavne[i] = Console.ReadLine();
+                }
+                Console.WriteLine("Bynavnene i omvendt rækkefølge:");
+                for (int i = bynavne.Length - 1; i >= 0; i--)
+                {
+                    Console.WriteLine(bynavne[i]);
+                }
+            }
         }
-
         public static void List1()
         {
             Console.WriteLine("Opgave 1 (List):");
@@ -65,6 +103,13 @@ namespace Opgaver
             );
             // Lav opgaven herunder!
             List<string> navne = new List<string>();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Indtast fornavn " + (i + 1) + ": ");
+                string navn = Console.ReadLine();
+                navne.Add(navn);
+            }
+            
         }
 
         public static void List2()
@@ -75,6 +120,21 @@ namespace Opgaver
                 navne indtil de skriver 'stop'. Udskriv alle navnene til sidst."
             );
             // Lav opgaven herunder!
+            List<string>navvnene= new List<string>();
+            while (true)
+            {
+                Console.WriteLine("Indtast et navn (eller skriv 'stop' for at afslutte): ");
+                string navn = Console.ReadLine();
+                if (navn.ToLower() == "stop")
+                {
+                    break;
+                }
+                navvnene.Add(navn);
+            }
+            foreach (string navn in navvnene)
+            {
+                Console.WriteLine(navn);
+            }
         }
 
         public static void List3()
@@ -85,6 +145,23 @@ namespace Opgaver
                 og programmet udskriver gennemsnittet."
             );
             // Lav opgaven herunder!
+            List<int> tal = new List<int>();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Indtast tal " + (i + 1) + ": ");
+                int number = int.Parse(Console.ReadLine());
+                tal.Add(number);
+            }
+            if (tal.Count > 0)
+            {
+                int sum = 0;
+                foreach (int number in tal)
+                {
+                    sum += number;
+                }
+                double average = (double)sum / tal.Count;
+                Console.WriteLine("Gennemsnittet er: " + average);
+            }
         }
 
         public static void List4()
@@ -95,7 +172,35 @@ namespace Opgaver
                 og kan fjerne ting fra listen igen. Udskriv listen til sidst."
             );
             // Lav opgaven herunder!
-        }
+            List<string> indkøbsliste = new List<string>();
+            while (true)
+            {
+                Console.WriteLine("Indtast en ting du skal købe (eller skriv 'stop' for at afslutte): ");
+                string ting = Console.ReadLine();
+                if (ting.ToLower() == "stop")
+                {
+                    break;
+                }
+                indkøbsliste.Add(ting);
+            } 
+              while(true)
+                { Console.WriteLine("Vil du fjerne en ting fra listen? (ja/nej): ");
+                    string svar = Console.ReadLine();
+                    if (svar.ToLower() == "ja")
+                    {
+                        Console.WriteLine("Indtast navnet på tingen du vil fjerne: ");
+                        string tingAtFjerne = Console.ReadLine();
+                        indkøbsliste.Remove(tingAtFjerne);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            Console.WriteLine("Din indkøbsliste ");
+              foreach (string ting in indkøbsliste) {Console.WriteLine(ting); }
+        }  
+
 
         public static void List5()
         {
@@ -105,6 +210,29 @@ namespace Opgaver
                 i en liste og programmet udskriver hvor mange navne der starter med 'A'."
             );
             // Lav opgaven herunder!
+            List<string>venner=new List<string>();
+            while (true)
+            {
+                Console.WriteLine("Indtast navn på din venner(eller skriv'stop'for at afslutte)");
+             string navne = Console.ReadLine();
+                if (navne.ToLower() == "stop")
+                {
+                    break;
+                }
+                venner.Add(navne);
+            }
+            if(venner.Count > 0)
+            {
+                int countA = 0;
+                foreach (string navn in venner)
+                {
+                    if (navn.StartsWith("A", StringComparison.OrdinalIgnoreCase))
+                    {
+                        countA++;
+                    }
+                }
+                Console.WriteLine("Antal navne der starter med 'A': " + countA);
+            }
         }
 
         public static void Dict1()
@@ -116,6 +244,33 @@ namespace Opgaver
             );
             // Lav opgaven herunder!
             // Husk syntaxen for Dictionary<type, type> navn = new Dictionary<type, type>();
+            Dictionary<string, int> personer = new Dictionary<string, int>();
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Indtast navn på person " + (i + 1) + ": ");
+                string navn = Console.ReadLine();
+                Console.WriteLine("Indtast alder på " + navn + ": ");
+                int alder = int.Parse(Console.ReadLine());
+                personer.Add(navn, alder);
+            }
+            while (true)
+            {
+                Console.WriteLine("Vil du se alle personer i dictionaryen? (ja/nej): ");
+                string svar = Console.ReadLine();
+                if (svar.ToLower() == "ja")
+                {
+                    foreach (KeyValuePair<string, int> person in personer)
+                    {
+                        Console.WriteLine("Navn: " + person.Key + ", Alder: " + person.Value);
+                    }
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
         }
 
         public static void Dict2()
@@ -126,6 +281,51 @@ namespace Opgaver
                 og få alderen på personen ud fra dictionaryen fra før."
             );
             // Lav opgaven herunder!
+            Dictionary<string, int> personer = new Dictionary<string, int>();
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Indtast navn på person " + (i + 1) + ": ");
+                string navn = Console.ReadLine();
+                Console.WriteLine("Indtast alder på " + navn + ": ");
+                int alder = int.Parse(Console.ReadLine());
+                personer.Add(navn, alder);
+            }
+            while (true)
+            {
+                Console.WriteLine("Vil du se alle personer i dictionaryen? (ja/nej): ");
+                string svar = Console.ReadLine();
+                if (svar.ToLower() == "ja")
+                {
+                    foreach (KeyValuePair<string, int> person in personer)
+                    {
+                        Console.WriteLine("Navn: " + person.Key + ", Alder: " + person.Value);
+                    }
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+
+                while (true)
+                {
+                    Console.WriteLine("Indtast et navn for at få alderen (eller skriv 'stop' for at afslutte): ");
+                    string navn = Console.ReadLine();
+                    if (navn.ToLower() == "stop")
+                    {
+                        break;
+                    }
+
+                    if (personer.TryGetValue(navn, out int alder))
+                    {
+                        Console.WriteLine("Alder på " + navn + " er: " + alder);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Navnet findes ikke i dictionaryen.");
+                    }
+                }
+            }
         }
 
         public static void MiniProjektKlasseliste()
